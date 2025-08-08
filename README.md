@@ -32,21 +32,27 @@ Build a **console-based Library Management System** using Java that allows users
 ---
 
 ## ⚓ Code Overview
-🔹 Book Class
-Stores book details: title, author, and isIssued.
-Methods: issue(), returnBook(), toString().
-🔹 User Class
-Stores user details: name and userId.
-🔹 Library Class
-Manages ArrayList<Book> and ArrayList<User>.
-Handles:
-Adding books/users
-Issuing/returning books
-Displaying data
-🔹 main() Method
-Initializes library
-Loads sample data
-Provides interactive menu
+### 🔹 Book Class
+- Stores book details: `title`, `author`, and `isIssued`.
+- Methods:
+  - `issue()`
+  - `returnBook()`
+  - `toString()`
+
+### 🔹 User Class
+- Stores user details: `name` and `userId`.
+
+### 🔹 Library Class
+- Manages `ArrayList<Book>` and `ArrayList<User>`.
+- Handles:
+  - Adding books/users  
+  - Issuing/returning books  
+  - Displaying data
+
+### 🔹 main() Method
+- Initializes library  
+- Loads sample data  
+- Provides interactive menu
 
 ---
 
