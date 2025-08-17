@@ -63,7 +63,7 @@ LibraryManagementSystem/
 
 ---
 
-## 🧿 Core Classes
+## ⛷️ Core Classes
 
 ### 📘 Book
 
