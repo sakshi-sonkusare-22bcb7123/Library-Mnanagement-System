@@ -1,77 +1,178 @@
-#  🏛️ Java Library Management System
+# 🕋 Java Library Management System
 
-## 🚩 Objective
+A **console-based application** built in **Java** that simulates a simple **Library Management System (LMS)**.
+It allows librarians and users to **add books, register users, issue and return books, and view records**.
 
-Build a **console-based Library Management System** using Java that allows users to register, issue books, return books, and view available books and registered users. The project is object-oriented and simulates basic library operations in a simple and interactive way.
-
----
-
-## 🛴 Key Concepts Used
-
-- **Object-Oriented Programming (OOP)**
-  - Classes and Objects
-  - Encapsulation
-- **Java Collections**
-  - `ArrayList`
-- **Control Structures**
-  - `do-while`, `switch-case`, `for` loops
-- **User Input**
-  - `Scanner`
-- **CLI Menus**
+Designed with **Object-Oriented Programming (OOP)** principles and powered by **Java Collections**, this project models **real-world library workflows** in a lightweight, interactive way.
 
 ---
 
-## 🦜 What I Learned
-- How to model real-world entities (Books, Users) using Java classes.
-- How to manage relationships between objects (issuing a book to a user).
-- Working with ArrayList to store dynamic data.
-- Implementing interactive command-line interfaces.
--  Using Scanner for robust user input handling.
-- Writing clean, modular, and object-oriented code.
+## 🐡 Goals
+
+* Apply **OOP concepts** (Encapsulation, Abstraction, Classes & Objects).
+* Build a **menu-driven console interface** for library operations.
+* Use **ArrayList** for efficient, dynamic data management.
+* Implement a simple **book borrowing and returning system**.
 
 ---
 
-## ⚓ Code Overview
-### 🔹 Book Class
-- Stores book details: `title`, `author`, and `isIssued`.
-- Methods:
-  - `issue()`
-  - `returnBook()`
-  - `toString()`
+## 🐧 Features
 
-### 🔹 User Class
-- Stores user details: `name` and `userId`.
+### 📖 Book Management
 
-### 🔹 Library Class
-- Manages `ArrayList<Book>` and `ArrayList<User>`.
-- Handles:
-  - Adding books/users  
-  - Issuing/returning books  
-  - Displaying data
+* Add new books.
+* View all books (categorized as **Available** or **Issued**).
 
-### 🔹 main() Method
-- Initializes library  
-- Loads sample data  
-- Provides interactive menu
+### 👤 User Management
 
----
+* Register new users.
+* Display list of registered users.
 
-## 🥤🍀 About the Author
+### 🔄 Borrowing System
 
-**Sakshi Bhojraj Sonkusare**  
+* **Issue books** to users (updates book status to *Issued*).
+* **Return books** (updates book status back to *Available*).
 
-Aspiring software developer with a strong interest in creating impactful, user-friendly applications. Passionate about continuous learning and bringing ideas to life through code.
+### 🖥️ Interactive Console Menu
 
-- LinkedIn: [https://www.linkedin.com/in/sakshi-sonkusare-381362354/](https://www.linkedin.com/in/sakshi-sonkusare-381362354/)  
-- Portfolio: Coming Soon  
+* Easy-to-use menu with options **1–5**.
+* Loops until user selects **Exit**.
 
 ---
 
-## Contributions and Support ❤️
+## 🧰 Tech Stack & Tools
 
-Feedback, suggestions, and contributions are always welcome.   
-Pull requests for improvements, bug fixes, or feature additions are encouraged.
+| Tool / Library            | Purpose                        |
+| ------------------------- | ------------------------------ |
+| **Java (JDK 17+)**        | Programming language           |
+| **ArrayList**             | Store & manage books and users |
+| **Scanner**               | Handle user input from console |
+| **Switch-case**           | Menu-driven command selection  |
+| **VS Code / IntelliJ**    | Development environment        |
+| **Terminal / PowerShell** | Compile & run application      |
 
 ---
 
+## 🏗️ Project Structure
 
+```
+LibraryManagementSystem/
+├─ LibraryManagementSystem.java   # Main program file
+└─ README.md                      # Documentation
+```
+
+---
+
+## 🧿 Core Classes
+
+### 📘 Book
+
+* **Attributes**: `title`, `author`, `isIssued`.
+* **Methods**:
+
+  * `issue()` → mark as issued.
+  * `returnBook()` → mark as available.
+  * `toString()` → formatted book details.
+
+### 👩‍💼 User
+
+* **Attributes**: `name`, `userId`.
+* **Methods**:
+
+  * `toString()` → formatted user details.
+
+### 🏛️ Library
+
+Manages `ArrayList<Book>` and `ArrayList<User>`.
+
+* **Methods**:
+
+  * `addBook(Book book)`
+  * `addUser(User user)`
+  * `issueBook(String title, int userId)`
+  * `returnBook(String title)`
+  * `displayBooks()`
+  * `displayUsers()`
+
+### 🖥️ Main Program (`main()`)
+
+* Loads **sample books & users**.
+* Provides **menu loop** for user interactions.
+
+---
+
+## 🪜 Setup & Run
+
+1. **Compile the program**
+
+   ```bash
+   javac LibraryManagementSystem.java
+   ```
+
+2. **Run the program**
+
+   ```bash
+   java LibraryManagementSystem
+   ```
+
+---
+
+## 📺 Example Console Flow
+
+```
+----- Library Menu -----
+1. Display Books
+2. Display Users
+3. Issue Book
+4. Return Book
+5. Exit
+Enter your choice: 1
+```
+
+---
+
+## 🚩 Example Test Cases
+
+* **Add Book**
+  → Add "The Alchemist" → appears in list as *Available*.
+
+* **Issue Book**
+  → Issue "Clean Code" to User #1 → status changes to *Issued*.
+
+* **Return Book**
+  → Return "Clean Code" → status changes back to *Available*.
+
+* **Invalid Input**
+  → Enter choice `9` → displays *"Invalid choice!"*.
+
+---
+
+## 🧁👾 Learning Outcomes
+
+* Modeled **real-world entities** into Java classes.
+* Practiced **OOP principles** in a practical project.
+* Gained experience with **ArrayList** for data handling.
+* Designed a **menu-driven CLI application**.
+* Improved skills in **clean, modular, and reusable code**.
+
+---
+
+## 🥤☘️ Author
+
+**Sakshi Bhojraj Sonkusare**
+💡 Aspiring Software Developer passionate about building **practical, user-friendly applications**.
+
+* 🔗 [LinkedIn](#)
+* 🌐 Portfolio: *Coming Soon*
+
+---
+
+## ❤️ Contributions
+
+Feedback and contributions are always welcome! 🎉
+
+* Fork the repo
+* Suggest improvements
+* Open pull requests
+
+---
